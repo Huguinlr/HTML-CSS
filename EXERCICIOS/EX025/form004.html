@@ -11,19 +11,43 @@
     
     <form action="cadastro.php" method="get" autocomplete="on">
 
-        <p>
-            <label for="iemail">E-mail</label>
-            <input type="email" name="email" id="iemail" autocomplete="email" required>
-        </p>
-        <p>
-            <label for="itel">Telefone</label>
-            <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required>
-        </p>
+        
+        <fieldset>
+
+            <legend>Dados Pessoais</legend>
+
+
+            <p>
+                <label for="inome">Nome</label>
+                <input type="text" name="Nome" id="inome" minlength="5" max="20" required>
+            </p>
+            <p>
+                <label for="iemail">E-mail</label>
+                <input type="email" name="email" id="iemail" autocomplete="email" required placeholder="exemplo@seuemail.com" >
+            </p>
+            <p>
+                <label for="itel">Telefone</label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required placeholder="(xx)xxxx-xxxx">
+            </p>
+
+            <p>
+                <input type="submit" value="Enviar" style="background-color: aqua;">
+                <input type="reset" value="Limpar" style="background-color: yellowgreen; " >
+            </p>
+        </fieldset>
+
+      
+
+        <fieldset>
+            <legend>
+                Escreva um pouco sobre você:
+            </legend>
+
+           <input type="text" name="" id="" size="100%">
+        </fieldset>
+
         <!--Estudar mais sobre RegEx-->
-        <p>
-            <input type="submit" value="Enviar" style="background-color: aqua;">
-            <input type="reset" value="Limpar" style="background-color: yellowgreen; border-style: dashed;" >
-        </p>
+       
 
     </form>
 </body>
